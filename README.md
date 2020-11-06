@@ -7,8 +7,10 @@ This can be done by first capturing the traffic using WireShark on the USB inter
 
 Take this data into the Kali command line and run the following commands:
 
+```
 tshark -r <file>.pcap -T fields -e usb.capdata > keystrokes.txt
 cat keystrokes.txt |awk 'NF' >pipe; cat pipe >keystrokes.txt
+```
   
 The keyboard conversion information can be found at https://www.usb.org/sites/default/files/documents/hut1_12v2.pdf and this script was based on the information provided by:
 https://ctf-wiki.github.io/ctf-wiki/misc/traffic/protocols/USB/
