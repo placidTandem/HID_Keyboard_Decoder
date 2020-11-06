@@ -3,7 +3,7 @@ This is used to decode HID Keyboard commands that have been intercepted in a pac
 
 To use this tool requires you to extract the key data first from a packet analyzer tool.
 
-This can be done by first capturing the traffic using WireShark on the USB interface. Then narrowing the results to usb.src == "1.9.2"&& !(usb.capdata == 00:00:00:00:00:00:00:00)&&(usb.transfer_type == 0x01) where the source is the correct one for the keyboard.
+This can be done by first capturing the traffic using WireShark on the USB interface. Then narrowing the results to usb.src == "1.9.2"&& !(usb.capdata == 00:00:00:00:00:00:00:00)&&(usb.transfer_type == 0x01) where the usb.src is the correct one for the keyboard.
 
 Take this data into the Kali command line and run the following commands:
 
