@@ -18,31 +18,22 @@ def extract_key_presses(key_strokes_file):
 	keys = open(key_strokes_file)
 	
 	for line in keys:
-	
 		if line[6:8] == "00":
 			#print (line[4:6])
 			nums.append(int(line[4:6],16))
 			#print(nums)
-
 	keys.close()
 
 def print_key_presses_to_terminal():
 	output = ""
 
 	for n in nums:
-
 		if n == 0 :
-
 			continue
-
 		if n in mappings:
-
 			output += mappings[n]
-
 		else:
-
 			output += '[unknown]'
-
 	print('Output :' + output)
 
 def main(argv):
